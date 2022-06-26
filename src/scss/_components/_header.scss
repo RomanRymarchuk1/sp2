@@ -1,0 +1,128 @@
+.header {
+  background-color: rgba(39, 38, 42, 1);
+
+  @media (min-width: $desktop-bp) {
+    background-color: black;
+  }
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+
+  @media (min-width: $tablet-bp) {
+    padding: 22px 0;
+  }
+}
+
+.header__logo-svg--hover {
+  display: none;
+}
+
+.header__logo--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  height: 41px;
+
+  &:hover > .header__logo-title {
+    color: $white-cl;
+  }
+  &:hover > .header__logo-svg {
+    display: none;
+  }
+  &:hover > .header__logo-svg--hover {
+    display: block;
+  }
+}
+
+.header__logo-title {
+  display: none;
+
+  @media (min-width: $tablet-bp) {
+    display: block;
+    padding-left: 17px;
+    color: $viole-cl;
+    font-size: 24px;
+    font-family: "Lato";
+  }
+}
+
+.header__buy-now {
+  @include violet-links-btns();
+  font-size: 15px;
+
+  @media (min-width: $tablet-bp) {
+    padding: 11px 45px;
+  }
+}
+
+.header__menu {
+  position: relative;
+
+  @media (min-width: $tablet-bp) {
+    padding: 0 7%;
+  }
+}
+
+.header__menu-list {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 1);
+  height: 335px;
+
+  @media (min-width: $tablet-bp) {
+    display: flex;
+    justify-content: space-evenly;
+    position: static;
+    background-color: rgba(51, 51, 51, 0);
+    height: 35px;
+  }
+
+  @media (min-width: $desktop-bp) {
+    position: absolute;
+    justify-content: space-between;
+    width: 50%;
+    top: -50px;
+    right: 20%;
+  }
+}
+
+.header__menu-item {
+  padding: 30px 0 20px 0;
+  border-bottom: 3px solid rgba(59, 59, 59, 1);
+
+  @media (min-width: $tablet-bp) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.header__menu-link {
+  font-family: $montserrat;
+  padding: 27px 75px 23px 35px;
+  font-weight: 400;
+  font-size: 22px;
+  color: $white-cl;
+
+  &:hover {
+    color: $white-cl;
+  }
+
+  @media (max-width: 480px) {
+    &:focus {
+      color: $viole-cl;
+      border-left: 8px solid $viole-cl;
+      padding: 15px 75px 5px 35px;
+    }
+  }
+
+  @media (min-width: $tablet-bp) {
+    font-size: 16px;
+    padding: 0;
+    color: $viole-cl;
+  }
+}

@@ -1,0 +1,67 @@
+@mixin violet-links-btns {
+  padding: 10px 21.5px;
+  color: $white-cl;
+  font-family: $montserrat;
+
+  border-radius: 40px;
+  background-color: $viole-cl;
+
+  &:hover {
+    color: $viole-cl;
+    background-color: $white-cl;
+    outline: 1px solid $viole-cl;
+  }
+}
+@mixin titles {
+  font-family: $montserrat;
+  color: $white-cl;
+  font-weight: 700;
+  padding: 50px 0 20px;
+}
+
+@mixin main-text {
+  height: 74px;
+
+  font-family: $lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+
+  color: $color-main-text;
+}
+
+@mixin posts-title {
+  height: 16px;
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: $color-main-text;
+
+}
+
+@mixin posts-description {
+  height: 81px;
+  font-family: $lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: $color-posts-descr;
+
+}
+@mixin footer-text {
+  height: 25px;
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $white-cl;
+}

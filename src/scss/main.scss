@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@600;700&family=Roboto:wght@300;400&display=swap");
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.none {
+  display: none;
+}
+@import "./_abstracts/_variables.scss";
+@import "./_abstracts/_mixins.scss";
+@import "./_components/_btns.scss";
+@import "./_components/_header.scss";
+@import "./_components/_page-container.scss";
+@import "./_components/_fork-app.scss";
+@import "./_components/_people-talking.scss";
+@import "./_reset.scss";
+@import "./_components/_revolutionary-editor.scss";
+@import "./_components/_what-you-get.scss";
+@import "./_components/_pricing.scss";
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: $max-desktop-bp;
+  margin: 0 auto;
+  min-width: 320px;
+  // padding: 0 10px;
+}
+

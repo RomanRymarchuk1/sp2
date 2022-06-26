@@ -1,0 +1,98 @@
+.people-talking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  flex-direction: column;
+  background-image: url(../images/people-talking-about-fork-MOBILE-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $tablet-bp) {
+    background-image: url(../images/people-talking-about-fork-TABLET-bg.jpg);
+
+    padding: 0 28px;
+  }
+}
+
+.people-talking__title {
+  @include titles;
+  font-size: 36px;
+  text-align: center;
+  padding: 57px 0 53px;
+
+  @media (min-width: $tablet-bp) {
+    padding: 85px 0 85px;
+  }
+
+  @media (min-width: $desktop-bp) {
+    padding: 108px 0 85px;
+  }
+}
+
+.people-talking__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: $tablet-bp) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-bp) {
+    justify-content: space-around;
+  }
+}
+
+.people-talking__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 45px;
+
+  @media (min-width: $tablet-bp) {
+    padding-bottom: 60px;
+
+    width: 43%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-bp) {
+    padding-bottom: 110px;
+    width: 30%;
+  }
+}
+
+.people-talking__description {
+  padding-top: 33px;
+  font-family: $lato;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: $white-cl;
+  text-align: center;
+}
+
+.people-talking__footer {
+  text-align: center;
+  font-weight: 400;
+  line-height: 21px;
+  font-size: 14px;
+  font-family: $lato;
+  padding-bottom: 22px;
+  border-bottom: 2px solid rgba(100, 87, 102, 1);
+  color: rgba(162, 145, 165, 1);
+
+  @media (min-width: $tablet-bp) {
+    padding-top: 7px;
+  }
+
+  @media (min-width: $desktop-bp) {
+    width: 887px;
+  }
+}

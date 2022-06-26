@@ -1,0 +1,8 @@
+.header__menu-btn {
+  background-color: rgba(141, 129, 172, 0);
+  border: none;
+
+  @media (min-width: $tablet-bp) {
+    display: none;
+  }
+}

@@ -1,0 +1,149 @@
+@import "../_abstracts/_variables.scss";
+@import "../_abstracts/_mixins.scss";
+
+.revolut-editor__content {
+    text-align: center;
+    padding: 80px 14px 88px 18px;
+
+
+    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+        padding: 94px 30px 98px 29px;
+
+    }
+
+    @media (min-width: $desktop-bp) {
+        padding: 66px 136px 70px 140px;
+
+    }
+
+    .revolut-editor__title {
+        display: inline-block;
+        height: 46px;
+        width: 273px;
+        font-family: $montserrat;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 28px;
+        text-transform: uppercase;
+
+        color: $color-revolut-title;
+
+
+        @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+            height: 42px;
+            width: auto;
+            font-size: 42px;
+            line-height: 42px;
+
+
+        }
+
+        @media (min-width: $desktop-bp) {
+            height: 54px;
+            width: auto;
+            font-size: 54px;
+            line-height: 54px;
+
+        }
+
+
+    }
+
+    .revolut-editor__subtitle {
+        @include main-text;
+        padding-top: 27px;
+        padding-bottom: 13px;
+
+        @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+            height: auto;
+            font-size: 21px;
+            line-height: 32px;
+            padding-top: 33px;
+            padding-bottom: 0px;
+        }
+
+        @media (min-width: $desktop-bp) {
+
+            height: 64px;
+            font-size: 21px;
+            line-height: 32px;
+            padding-top: 35px;
+            padding-bottom: 13px;
+        }
+    }
+}
+
+.revolut-editor__github-btn {
+    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+        padding-top: 24px;   
+    }
+ 
+    @media (min-width: $desktop-bp) {
+        padding-top: 0px; 
+    }
+    .revolut-editor__github-btn-content {
+        padding: 3px 12px;
+        background-color: none;
+        border-color: $color-git-btn-border;
+        display: inline-block;
+        font-weight: 500;
+        border: 1px solid;
+        border-radius: 6px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+
+        @media (min-width: $tablet-bp) and (max-width: $desktop-bp){
+            margin-top: 24px;
+        }
+        @media (min-width: $desktop-bp){
+            margin-top: 13px;
+        }
+
+
+        .revolut-editor__github-btn--watch-btn-octicon {
+            vertical-align: text-top;
+            padding-bottom: 3px;
+        }
+
+        .revolut-editor__github-btn-text {
+            padding-top: 2px;
+            height: 18px;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color-git-text;
+            font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        }
+
+        .revolut-editor__github-btn-number {
+            height: 18px;
+            font-size: 12px;
+            line-height: 20px;
+            color: $color-git-text;
+            font-family: "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+            background-color: $color-git-btn-bg;
+            border: none;
+            border-radius: 30px;
+            height: 20px;
+            padding: 0px 5px;
+        }
+
+        .revolut-editor__github-btn-dropdown-caret {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            vertical-align: middle;
+            content: "";
+            border-style: solid;
+            border-width: 4px 4px 0;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+        }
+
+    }
+
+}

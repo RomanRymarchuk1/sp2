@@ -1,0 +1,87 @@
+.fork-app {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  height: 608px;
+
+  background-image: url(../images/header-img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: $tablet-bp) {
+    height: 690px;
+  }
+}
+
+.fork-app__title {
+  @include titles();
+
+  font-size: 48px;
+
+  @media (min-width: $tablet-bp) {
+    font-size: 72px;
+  }
+
+  @media (min-width: $desktop-bp) {
+    font-size: 82px;
+  }
+}
+
+.fork-app__subtitle {
+  text-align: center;
+  font-family: $montserrat;
+  color: $viole-cl;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 30px 15px;
+
+  @media (min-width: $tablet-bp) {
+    font-size: 24px;
+    font-family: $lato;
+  }
+  @media (min-width: $desktop-bp) {
+    font-size: 30px;
+  }
+}
+
+.fork-app__version {
+  font-family: $montserrat;
+  color: $gray-cl;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-bp) {
+    font-size: 16px;
+  }
+}
+
+.fork-app__download-link--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: -22px;
+}
+
+.fork-app__download-link {
+  @include violet-links-btns;
+
+  font-size: 18px;
+  padding: 10px 33px;
+}
+
+.fork-app__download-link__info {
+  color: $gray-cl;
+  padding-top: 12.5px;
+  font-family: $montserrat;
+  font-weight: 400;
+  font-size: 14px;
+
+  @media (min-width: $tablet-bp) {
+    padding-top: 19px;
+  }
+}

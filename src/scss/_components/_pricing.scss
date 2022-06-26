@@ -1,0 +1,365 @@
+@import "../_abstracts/_variables.scss";
+@import "../_abstracts/_mixins.scss";
+
+.footer {
+  @media (min-width: $tablet-bp) {
+    background-image: url(../../../dist/images/footer-bg-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+
+.footer__content {
+  text-align: center;
+  display: grid;
+  background-image: url(../../../dist/images/footer-bg-tablet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-bp) {
+    background-image: url(../../../dist/images/footer-bg-desktop.jpg);
+    background: none;
+  }
+
+  grid-template-areas:
+    "footer__title"
+    "footer__card-1"
+    "footer__card-2"
+    "footer__card-3"
+    "footer__card-4";
+
+  text-align: center;
+  justify-items: center;
+  // overflow: hidden;
+
+  @media (min-width: $tablet-bp-opt) and (max-width: $desktop-bp-opt) {
+    grid-template-areas:
+      "footer__title footer__title"
+      "footer__card-1 footer__card-2"
+      "footer__card-3 footer__card-4";
+    column-gap: 0px;
+  }
+
+  @media (min-width: $desktop-bp-opt) {
+    grid-template-areas:
+      "footer__title footer__title footer__title footer__title"
+      "footer__card-1 footer__card-2 footer__card-3 footer__card-4";
+    column-gap: 15px;
+    justify-content: center;
+    grid-template-columns: 257px 257px 299px 257px;
+  }
+
+  .footer__title {
+    height: 69px;
+    width: 320px;
+    font-family: $montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    color: $white-cl;
+    text-align: center;
+
+    padding-top: 14px;
+    padding-bottom: 32px;
+    grid-area: footer__title;
+
+    @media (min-width: $tablet-bp) and (max-width: $desktop-bp) {
+      // height: 41px;
+      height: auto;
+      font-size: 42px;
+      line-height: 44px;
+      width: auto;
+      padding-top: 88px;
+      padding-bottom: 39px;
+    }
+
+    @media (min-width: $desktop-bp) {
+      height: 46px;
+      font-size: 48px;
+      line-height: 50px;
+      width: auto;
+      padding-top: 83px;
+      padding-bottom: 61px;
+    }
+  }
+
+  .footer__card {
+    width: 257px;
+    height: 457px;
+    padding: 0px 32px 18px 31px;
+
+    @media (min-width: $tablet-bp-opt) {
+      padding: 0;
+    }
+
+    .footer__card-title {
+      width: 257px;
+      height: 97px;
+      background-color: $color-footer-title;
+      align-items: center;
+
+      .footer__card-title-text {
+        @include footer-text;
+        text-align: center;
+        padding: 36px 0px;
+      }
+    }
+
+    .footer__card-content {
+      text-align: center;
+      background-color: $color-footer-content-bg;
+
+      .footer__card-content-price {
+        @include footer-text;
+        height: 57px;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 62px;
+        padding-top: 30px;
+      }
+
+      .footer__card-content-price-subtitle {
+        @include footer-text;
+        height: 18px;
+        font-size: 14px;
+        line-height: 16px;
+        padding-top: 20px;
+        padding-bottom: 38px;
+      }
+
+      .footer__card-content-comment {
+        @include footer-text;
+        height: 13px;
+        font-size: 16px;
+        line-height: 18px;
+        text-transform: none;
+        padding-bottom: 37px;
+      }
+
+      .footer__card-content-purchase {
+        @include footer-text;
+        height: 15px;
+        font-size: 15px;
+        line-height: 15px;
+        width: 163px;
+        height: 45px;
+        text-align: center;
+      }
+
+      .footer__card-content-comment {
+        @include footer-text;
+        height: 13px;
+        font-size: 16px;
+        line-height: 18px;
+        text-transform: none;
+        padding-bottom: 37px;
+
+        @media (min-width: $tablet-bp-opt) {
+          padding-bottom: 68px;
+        }
+      }
+
+      .footer__card-content-comment-prof {
+        @include footer-text;
+        height: 44px;
+        font-size: 16px;
+        line-height: 28px;
+        text-transform: none;
+        padding-bottom: 37px;
+
+        @media (min-width: $tablet-bp-opt) {
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  .footer__card-content-purchase {
+    width: 163px;
+    height: 45px;
+    border-radius: 40px;
+    background-color: $color-footer-title;
+    border: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .footer__card-content-purchase-link {
+    @include footer-text;
+    height: 15px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .footer__card-content-line {
+    width: 60px;
+    padding-bottom: 30px;
+    display: inline-block;
+    height: 5px;
+    border: 0;
+    border-top: 5px solid $color-footer-line;
+  }
+
+  .footer__card-content-purchase-prof {
+    width: 163px;
+    height: 45px;
+    border-radius: 40px;
+    background-color: $color-footer-title;
+    border: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .footer__card--selected {
+    width: 299px;
+    height: 560px;
+    padding: 0px 11px 18px 10px;
+
+    @media (min-width: $tablet-bp-opt) {
+      padding: 0;
+    }
+
+    .footer__card-title--selected {
+      width: 299px;
+      height: 111px;
+      background-color: $color-footer-selected-title;
+      align-items: center;
+
+      .footer__card-title-text--selected {
+        @include footer-text;
+        text-align: center;
+        padding: 36px 0px;
+      }
+    }
+
+    .footer__card-content--selected {
+      text-align: center;
+      background-color: $color-footer-selected-bg;
+
+      .footer__card-content-price--selected {
+        @include footer-text;
+        height: 78px;
+        font-weight: 700;
+        font-size: 82px;
+        line-height: 84px;
+        padding-top: 30px;
+      }
+
+      .footer__card-content-price-subtitle--selected {
+        @include footer-text;
+        height: 20px;
+        font-size: 14px;
+        line-height: 16px;
+        padding-top: 16px;
+        padding-bottom: 46px;
+      }
+
+      .footer__card-content-comment-prof--selected {
+        @include footer-text;
+        height: 48px;
+        font-size: 16px;
+        line-height: 32px;
+        text-transform: none;
+        padding-top: 0px;
+        padding-bottom: 83px;
+
+        @media (min-width: $tablet-bp) {
+          line-height: 18px;
+        }
+      }
+
+      .footer__card-content-purchase--selected {
+        @include footer-text;
+        height: 15px;
+        font-size: 15px;
+        line-height: 15px;
+        padding-bottom: 67px;
+        width: 163px;
+        height: 45px;
+        text-align: center;
+      }
+
+      .footer__card-content-purchase--selected {
+        width: 163px;
+        height: 45px;
+        border-radius: 40px;
+        background-color: $color-footer-title;
+        border: none;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 67px;
+      }
+    }
+  }
+}
+
+.footer__card-content-purchase-margin {
+  margin-bottom: 67px;
+
+  @media (min-width: $tablet-bp-opt) {
+    margin-bottom: 36px;
+  }
+}
+
+.footer__card-content-purchase-margin-selected {
+  margin-bottom: 47px;
+}
+
+.footer__card-1 {
+  grid-area: footer__card-1;
+
+  @media (min-width: $tablet-bp-opt) and (max-width: $desktop-bp-opt) {
+    justify-self: right;
+    margin-right: 25px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-bp-opt) {
+    margin-top: 51px;
+  }
+}
+
+.footer__card-2 {
+  grid-area: footer__card-2;
+
+  @media (min-width: $tablet-bp-opt) and (max-width: $desktop-bp-opt) {
+    justify-self: left;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-bp-opt) {
+    margin-top: 51px;
+  }
+}
+
+.footer__card-3 {
+  grid-area: footer__card-3;
+
+  @media (min-width: $tablet-bp-opt) and (max-width: $desktop-bp-opt) {
+    justify-self: right;
+    margin-right: 25px;
+    margin-top: 0px;
+    margin-bottom: 94px;
+  }
+
+  @media (min-width: $desktop-bp-opt) {
+    margin-bottom: 87px;
+  }
+}
+
+.footer__card-4 {
+  grid-area: footer__card-4;
+
+  @media (min-width: $tablet-bp-opt) and (max-width: $desktop-bp-opt) {
+    justify-self: left;
+    grid-template-rows: 200px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop-bp-opt) {
+    margin-top: 51px;
+  }
+}
