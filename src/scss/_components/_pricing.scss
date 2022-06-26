@@ -3,7 +3,7 @@
 
 .footer {
   @media (min-width: $tablet-bp) {
-    background-image: url(../../../dist/images/footer-bg-desktop.jpg);
+    background-image: url(../images/footer-bg-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -13,12 +13,12 @@
 .footer__content {
   text-align: center;
   display: grid;
-  background-image: url(../../../dist/images/footer-bg-tablet.jpg);
+  background-image: url(../images/footer-bg-tablet.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (min-width: $tablet-bp) {
-    background-image: url(../../../dist/images/footer-bg-desktop.jpg);
+    background-image: url(../images/footer-bg-desktop.jpg);
     background: none;
   }
 
