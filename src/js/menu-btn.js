@@ -17,3 +17,16 @@ menuBtn.addEventListener("click", (e) => {
     closeMenuSvg.classList.add("none");
   }
 });
+
+document.addEventListener("click", (e) => {
+  if (
+    e.target !== mobileMenu &&
+    e.target !== menuBtn &&
+    e.target !== openMenuSvg
+  ) {
+    menuStatus = false;
+    mobileMenu.classList.add("none");
+    openMenuSvg.classList.remove("none");
+    closeMenuSvg.classList.add("none");
+  }
+});
